@@ -1,0 +1,76 @@
+
+@startuml Diagrama Ejercicio 2.3
+
+enum TipoCombustible {
+    GASOLINA
+    BIOETANOL
+    DIESEL
+    BIODIESEL
+    GAS_NATURAL
+}
+
+enum TipoAutomovil {
+    CIUDAD
+    SUBCOMPACTO
+    COMPACTO
+    FAMILIAR
+    EJECUTIVO
+    SUV
+}
+
+enum Color {
+    BLANCO
+    NEGRO
+    ROJO
+    NARANJA
+    AMARILLO
+    VERDE
+    AZUL
+    VIOLETA
+}
+
+class Automovil {
+    + marca: str
+    + modelo: int
+    + motor: int
+    + tipo_combustible: TipoCombustible
+    + tipo_automovil: TipoAutomovil
+    + numero_puertas: int
+    + cantidad_asientos: int
+    + velocidad_maxima: int
+    + color: Color
+    + velocidad_actual: int
+    
+    + __init__(marca: str, modelo: int, motor: int, tipo_combustible: TipoCombustible, tipo_automovil: TipoAutomovil, numero_puertas: int, cantidad_asientos: int, velocidad_maxima: int, color: Color)
+    + get_marca(): str
+    + set_marca(marca: str): None
+    + get_modelo(): int
+    + set_modelo(modelo: int): None
+    + get_motor(): int
+    + set_motor(motor: int): None
+    + get_tipo_combustible(): TipoCombustible
+    + set_tipo_combustible(tipo_combustible: TipoCombustible): None
+    + get_tipo_automovil(): TipoAutomovil
+    + set_tipo_automovil(tipo_automovil: TipoAutomovil): None
+    + get_numero_puertas(): int
+    + set_numero_puertas(numero_puertas: int): None
+    + get_cantidad_asientos(): int
+    + set_cantidad_asientos(cantidad_asientos: int): None
+    + get_velocidad_maxima(): int
+    + set_velocidad_maxima(velocidad_maxima: int): None
+    + get_color(): Color
+    + set_color(color: Color): None
+    + get_velocidad_actual(): int
+    + set_velocidad_actual(velocidad_actual: int): None
+    + acelerar(incremento: int): None
+    + desacelerar(decremento: int): None
+    + frenar(): None
+    + calcular_tiempo_llegada(distancia: float): float
+    + imprimir(): None
+}
+
+Automovil --> TipoCombustible
+Automovil --> TipoAutomovil
+Automovil --> Color
+
+@enduml

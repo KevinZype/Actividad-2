@@ -1,0 +1,40 @@
+
+@startuml Diagrama Ejercicio 2.4
+
+class Circulo {
+    + radio: float
+    
+    + __init__(radio: float)
+    + calcular_area(): float
+    + calcular_perimetro(): float
+}
+
+class Rectangulo {
+    + base: float
+    + altura: float
+    
+    + __init__(base: float, altura: float)
+    + calcular_area(): float
+    + calcular_perimetro(): float
+}
+
+class Cuadrado {
+    + lado: float
+    
+    + __init__(lado: float)
+    + calcular_area(): float
+    + calcular_perimetro(): float
+}
+
+class TrianguloRectangulo {
+    + base: float
+    + altura: float
+    
+    + __init__(base: float, altura: float)
+    + calcular_area(): float
+    + calcular_hipotenusa(): float
+    + calcular_perimetro(): float
+    + determinar_tipo_triangulo(): str
+}
+
+@enduml

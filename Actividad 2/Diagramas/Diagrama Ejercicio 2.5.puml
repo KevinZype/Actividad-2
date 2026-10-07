@@ -1,0 +1,25 @@
+
+@startuml Diagrama Ejercicio 2.5
+
+enum TipoCuenta {
+    AHORROS
+    CORRIENTE
+}
+
+class CuentaBancaria {
+    + nombres_titular: str
+    + apellidos_titular: str
+    + numero_cuenta: int
+    + tipo_cuenta: TipoCuenta
+    + saldo: float
+    
+    + __init__(nombres_titular: str, apellidos_titular: str, numero_cuenta: int, tipo_cuenta: TipoCuenta)
+    + imprimir(): None
+    + consultar_saldo(): None
+    + consignar(valor: float): bool
+    + retirar(valor: float): bool
+}
+
+CuentaBancaria --> TipoCuenta
+
+@enduml

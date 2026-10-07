@@ -1,0 +1,14 @@
+
+@startuml Diagrama Ejercicio 2.1
+
+class Persona {
+    + nombre: str
+    + apellidos: str
+    + numero_documento: str
+    + anio_nacimiento: int
+    
+    + __init__(nombre: str, apellidos: str, numero_documento: str, anio_nacimiento: int)
+    + imprimir(): None
+}
+
+@enduml
